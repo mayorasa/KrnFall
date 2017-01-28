@@ -155,6 +155,9 @@ public class PageInfoActivity extends AppCompatActivity {
     public void clickGpsFall(View view) {
 
         Intent intent = new Intent(PageInfoActivity.this, GpsFall.class);
+        intent.putExtra("NameFall", infodetail.get("name_th"));
+        intent.putExtra("Lat", infodetail.get("latitude"));
+        intent.putExtra("Lng", infodetail.get("longitude"));
         startActivity(intent);
 
     }   // click
