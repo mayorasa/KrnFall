@@ -1,11 +1,17 @@
 package com.example.krnfallex.krnfall;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
@@ -30,6 +36,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
     private LatLng centerLatLng;
     private LocationManager locationManager;
     private Criteria criteria;
+    private boolean aBoolean = true;    // true ==> distance > 500, false ==> distance < 500
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,16 +187,55 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         distanceADouble = distance(latADouble, lngADouble, fallLatADouble, fallLngADouble);
         Log.d("28janV4", "distance ==> " + distanceADouble);
 
-        //Delay
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                myLoop();
-            }
-        }, 1000);
+        //Check Distance
+        if (distanceADouble >= 500.00) {
+
+            //Delay
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (aBoolean) {
+                        myLoop();
+                    }
+                }
+            }, 1000);
+
+        } else {
+            aBoolean = false;
+            myNotification();
+        }
+
+
 
     }   // myLoop
+
+    private void myNotification() {
+
+        Intent intent = new Intent(GpsFall.this, AlertNotification.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(GpsFall.this,
+                (int) System.currentTimeMillis(), intent, 0);
+
+        Uri uri = RingtoneManager.getDefaultUri(Notification.DEFAULT_SOUND);
+
+        Notification.Builder builder = new Notification.Builder(GpsFall.this);
+        builder.setTicker("จวนถึงแว้วว");
+        builder.setContentTitle("ใกล้ " + nameFallString);
+        builder.setContentText("อีกไม่เกิน 500 เมตร คะ");
+        builder.setSmallIcon(R.drawable.build10);
+        builder.setSound(uri);
+        builder.setContentIntent(pendingIntent);
+
+        Notification notification = builder.build();
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(0, notification);
+
+
+    }   // myNoti
 
 
     //นี่คือ เมทอด ที่หาระยะ ระหว่างจุด
