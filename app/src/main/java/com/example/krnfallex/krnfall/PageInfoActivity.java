@@ -2,23 +2,18 @@ package com.example.krnfallex.krnfall;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PageInfoActivity extends AppCompatActivity {
@@ -26,19 +21,17 @@ public class PageInfoActivity extends AppCompatActivity {
 
     WaterfallInfoTable waterfallInfoTable;
     HashMap<String, String> infodetail;
-    TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth, in_url360, in_video_path,in_tellophone;
+    TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth, in_url360, in_video_path, in_tellophone;
     Double tatal;
     EditText editCal_Total;
     SimpleDateFormat df_show;
     ImageButton mDialogSimple;
     String numberPhone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_info);
-
-
-
 
 
         waterfallInfoTable = new WaterfallInfoTable(this);
@@ -61,91 +54,73 @@ public class PageInfoActivity extends AppCompatActivity {
         Log.d("28janV1", "ทดสอบการ Get Lng ==> " + infodetail.get("longitude"));
 
 
-
         RelativeLayout d = (RelativeLayout) findViewById(R.id.imgbg);
 
-        if (waterfall_id == 1)
-        {
+        if (waterfall_id == 1) {
             d.setBackgroundResource(R.drawable.pagelsth1);
         }
 
-        if (waterfall_id == 2)
-        {
+        if (waterfall_id == 2) {
             d.setBackgroundResource(R.drawable.pagelsth2);
         }
-        if (waterfall_id == 2)
-        {
+        if (waterfall_id == 2) {
             d.setBackgroundResource(R.drawable.pagelsth2);
         }
-        if (waterfall_id == 3)
-        {
+        if (waterfall_id == 3) {
             d.setBackgroundResource(R.drawable.pagelsth3);
         }
-        if (waterfall_id == 4)
-        {
+        if (waterfall_id == 4) {
             d.setBackgroundResource(R.drawable.pagelsth4);
         }
-        if (waterfall_id == 5)
-        {
+        if (waterfall_id == 5) {
             d.setBackgroundResource(R.drawable.pagelsth5);
         }
-        if (waterfall_id == 6)
-        {
+        if (waterfall_id == 6) {
             d.setBackgroundResource(R.drawable.pagelsth6);
         }
-        if (waterfall_id == 7)
-        {
+        if (waterfall_id == 7) {
             d.setBackgroundResource(R.drawable.pagelsth7);
         }
-        if (waterfall_id == 8)
-        {
+        if (waterfall_id == 8) {
             d.setBackgroundResource(R.drawable.pagelsth8);
         }
-        if (waterfall_id == 9)
-        {
+        if (waterfall_id == 9) {
             d.setBackgroundResource(R.drawable.pagelsth9);
         }
-        if (waterfall_id == 10)
-        {
+        if (waterfall_id == 10) {
             d.setBackgroundResource(R.drawable.pagelsth10);
         }
-        if (waterfall_id == 11)
-        {
+        if (waterfall_id == 11) {
             d.setBackgroundResource(R.drawable.pagelsth11);
         }
-        if (waterfall_id == 12)
-        {
+        if (waterfall_id == 12) {
             d.setBackgroundResource(R.drawable.pagelsth12);
         }
-        if (waterfall_id == 13)
-        {
+        if (waterfall_id == 13) {
             d.setBackgroundResource(R.drawable.pagelsth13);
         }
-        if (waterfall_id == 14)
-        {
+        if (waterfall_id == 14) {
             d.setBackgroundResource(R.drawable.pagelsth14);
         }
-        if (waterfall_id == 15)
-        {
+        if (waterfall_id == 15) {
             d.setBackgroundResource(R.drawable.pagelsth15);
         }
-        if (waterfall_id == 16)
-        {
+        if (waterfall_id == 16) {
             d.setBackgroundResource(R.drawable.pagelsth16);
-        }if (waterfall_id == 17)
-        {
+        }
+        if (waterfall_id == 17) {
             d.setBackgroundResource(R.drawable.pagelsth17);
-        }if (waterfall_id == 18)
-        {
+        }
+        if (waterfall_id == 18) {
             d.setBackgroundResource(R.drawable.pagelsth18);
-        }if (waterfall_id == 19)
-        {
+        }
+        if (waterfall_id == 19) {
             d.setBackgroundResource(R.drawable.pagelsth19);
-        }if (waterfall_id == 20)
-        {
+        }
+        if (waterfall_id == 20) {
             d.setBackgroundResource(R.drawable.pagelsth20);
-        }if (waterfall_id == 21)
-        {
+        }
+        if (waterfall_id == 21) {
             d.setBackgroundResource(R.drawable.pagelsth21);
         }
 
@@ -175,8 +150,14 @@ public class PageInfoActivity extends AppCompatActivity {
             }
         });
 
-        }
+    }   // Main Class
 
+    public void clickGpsFall(View view) {
+
+        Intent intent = new Intent(PageInfoActivity.this, GpsFall.class);
+        startActivity(intent);
+
+    }   // click
 
 
     public void titleview(View v) {
@@ -191,6 +172,7 @@ public class PageInfoActivity extends AppCompatActivity {
         TextView text5 = (TextView) findViewById(R.id.texttravelth);
         text5.setText(R.string.txt_null);
     }
+
     public void historyth(View v) {
         in_historyth = (TextView) findViewById(R.id.txtgeneralth);
         in_historyth.setText(infodetail.get("history_th"));
@@ -210,8 +192,7 @@ public class PageInfoActivity extends AppCompatActivity {
     }
 
 
-
-    }
+}
 
 
 

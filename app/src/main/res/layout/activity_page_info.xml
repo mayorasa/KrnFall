@@ -143,6 +143,7 @@
         android:src="@drawable/icgps"
         android:id="@+id/imageButton6"
         android:background="#00000000"
+        android:onClick="clickGpsFall"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
