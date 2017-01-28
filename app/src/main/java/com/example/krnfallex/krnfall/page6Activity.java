@@ -67,7 +67,7 @@ public class page6Activity extends AppCompatActivity {
 
     }
     public void clickmapapi(View view) {
-        startActivity(new Intent(page6Activity.this, MapsActivity.class));
+        //startActivity(new Intent(page6Activity.this, MapsActivity.class));
 
     }
     public void clicyoutube1(View view) {

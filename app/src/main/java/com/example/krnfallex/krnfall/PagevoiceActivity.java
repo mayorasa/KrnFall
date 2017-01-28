@@ -20,12 +20,15 @@ public class PagevoiceActivity extends AppCompatActivity {
 
     private TextView txtOutput;
     private ImageButton btnMicrophone;
+    WaterfallInfoTable waterfallnfoTable;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagevoice);
+
+        waterfallnfoTable = new WaterfallInfoTable(this);
 
         txtOutput = (TextView) findViewById(R.id.txt_output);
         btnMicrophone = (ImageButton) findViewById(R.id.btn_mic);
@@ -82,11 +85,12 @@ public class PagevoiceActivity extends AppCompatActivity {
                     txtOutput.setText(text);
 
 
+
                     if (text.equals("น้ำตกเอราวัณ"))
                     {
-                        startActivity(new Intent(PagevoiceActivity.this,page5Activity.class));
+                        startActivity(new Intent(PagevoiceActivity.this,PageInfoActivity.class));
                     }
-                    else if (text.equals("เอราวัณ waterfall"))
+                    else if (text.equals("Erawan waterfall"))
                     {
                         startActivity(new Intent(PagevoiceActivity.this,page6Activity.class));
                     }

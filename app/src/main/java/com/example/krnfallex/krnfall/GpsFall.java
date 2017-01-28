@@ -225,7 +225,6 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         }
 
 
-
     }   // myLoop
 
     private void myNotification() {

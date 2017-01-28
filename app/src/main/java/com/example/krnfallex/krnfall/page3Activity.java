@@ -13,7 +13,7 @@ public class page3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_page3);
     }
     public void clickmapeng(View view) {
-        startActivity(new Intent(page3Activity.this, page7Activity.class));
+        startActivity(new Intent(page3Activity.this, MapsActivity.class));
     }
     public void arawaneng(View view) {
         startActivity(new Intent(page3Activity.this, page6Activity.class));
