@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +55,10 @@ public class PageInfoActivity extends AppCompatActivity {
 
         in_nameth.setText(infodetail.get("name_th"));
         in_genaralth.setText(infodetail.get("genaral_th"));
+
+        Log.d("28janV1", "ทดสอบการ Get ชื่อน้ำตก ==> " + infodetail.get("name_th"));
+        Log.d("28janV1", "ทดสอบการ Get Lat ==> " + infodetail.get("latitude"));
+        Log.d("28janV1", "ทดสอบการ Get Lng ==> " + infodetail.get("longitude"));
 
 
 
