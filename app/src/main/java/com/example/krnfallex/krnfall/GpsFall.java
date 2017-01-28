@@ -170,9 +170,27 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         //Create All Marker
         createMarker();
 
-
         //Loop
         myLoop();
+
+        //Delay 5 sec When Click Marker
+        mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(LatLng latLng) {
+
+                aBoolean = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        aBoolean = true;
+                        myLoop();
+                    }
+                }, 5000);
+
+            }
+        });
 
     }   // onMapReady
 
