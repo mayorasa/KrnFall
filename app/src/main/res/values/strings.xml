@@ -28,6 +28,7 @@ Most tears are running into ponds, great for swimming. There are few picnic spot
     <string name="txt_travelth">การเดินทาง</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_gps_fall">Map</string>
+    <string name="title_activity_mapsthlist">Map</string>
 
 
 </resources>

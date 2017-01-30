@@ -2,13 +2,15 @@ package com.example.krnfallex.krnfall;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
-import java.sql.Blob;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-/**
- * Created by NarwhalZ on 21/1/2560.
- */
+
 public class WaterfallimageTable {
 
     private MyDatabase myDatabase;
@@ -25,13 +27,31 @@ public class WaterfallimageTable {
         readSQLite = myDatabase.getReadableDatabase();
     }
 
-    public long addNewValueToSQLite(int int_idwimage, int int_waterfallid, Byte[] Bb_imagepath) {
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(image_id, int_idwimage);
-        contentValues.put(waterfall_id, int_waterfallid);
-       // contentValues.put(image_path, Bb_imagepath);
-        long waterfallimage_Table_id = writeSQLite.insert(waterfall_image, null, contentValues);
-        return waterfallimage_Table_id;
+    public ArrayList<byte[]> getListImage(int id) {
+        SQLiteDatabase db = myDatabase.getReadableDatabase();
+        //HashMap<String, byte[]> falldb = new HashMap<String, byte[]>();
+        //String selectQuery = "SELECT * FROM " + waterfall_image + "WHERE waterfall_id = " + id;
+        String selectQuery = "SELECT * FROM " + waterfall_image + " WHERE " + waterfall_id + " = " + id;
+
+        ArrayList<byte[]> waterfallListImage = new ArrayList<byte[]>();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+
+                //falldb.put(image_path, cursor.getBlob(cursor.getColumnIndex(image_path)));
+                waterfallListImage.add(cursor.getBlob(cursor.getColumnIndex(image_path)));
+
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return waterfallListImage;
     }
+
+
+
+
 
 }

@@ -2,8 +2,11 @@ package com.example.krnfallex.krnfall;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,11 +17,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PageInfoActivity extends AppCompatActivity {
 
-
+    WaterfallimageTable waterfallimageTable;
     WaterfallInfoTable waterfallInfoTable;
     HashMap<String, String> infodetail;
     TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth, in_url360, in_video_path, in_tellophone;
@@ -28,23 +32,37 @@ public class PageInfoActivity extends AppCompatActivity {
     ImageButton mDialogSimple;
     String numberPhone;
 
+    MyCustomPagerAdapter myCustomPagerAdapter;
+    ArrayList<byte[]> listImage;
+    ArrayList<Bitmap> bitmapArray;
+    ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_info);
 
-
+        waterfallimageTable = new WaterfallimageTable(this);
+        bitmapArray = new ArrayList<Bitmap>();
         waterfallInfoTable = new WaterfallInfoTable(this);
+
+
+
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
 
         //รับค่าแต่ละหน้า Show id
         Intent intent2 = getIntent();
         final int waterfall_id = intent2.getIntExtra("waterfall_id", 0);
+
+
 
         infodetail = waterfallInfoTable.WalterfallInfo(waterfall_id);
 
         in_nameth = (TextView) findViewById(R.id.namefallth);
         in_genaralth = (TextView) findViewById(R.id.txtgeneralth);
         in_feeth = (TextView) findViewById(R.id.txtfeeth);
+
+
 
         in_nameth.setText(infodetail.get("name_th"));
         in_genaralth.setText(infodetail.get("genaral_th"));
@@ -125,6 +143,7 @@ public class PageInfoActivity extends AppCompatActivity {
         }
 
 
+
         mDialogSimple = (ImageButton) findViewById(R.id.imageButtoncallth);
         mDialogSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,6 +169,20 @@ public class PageInfoActivity extends AppCompatActivity {
             }
         });
 
+
+        /////
+        listImage = waterfallimageTable.getListImage(waterfall_id);
+        for (int i=0; i < listImage.size(); i++)
+        {
+            byte[] byteArray2 = listImage.get(i);
+            Bitmap bm = BitmapFactory.decodeByteArray(byteArray2, 0 ,byteArray2.length);
+            bitmapArray.add(bm);
+            //Log.d("Bloblength", String.valueOf(byteArray2.length));
+        }
+
+        ////
+        myCustomPagerAdapter = new MyCustomPagerAdapter(PageInfoActivity.this, bitmapArray);
+        viewPager.setAdapter(myCustomPagerAdapter);
     }   // Main Class
 
     public void clickGpsFall(View view) {
@@ -187,6 +220,9 @@ public class PageInfoActivity extends AppCompatActivity {
         text3.setText(R.string.txt_travelth);
         in_travelth = (TextView) findViewById(R.id.texttravelth);
         in_travelth.setText(infodetail.get("travel_th"));
+
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewPager.setVisibility(View.VISIBLE);
     }
 
     public void btrtif(View view) {

@@ -18,4 +18,5 @@ public class page7Activity extends AppCompatActivity {
     public void clickerawaneng(View view) {
         startActivity(new Intent(page7Activity.this, page6Activity.class));
     }
+    
 }

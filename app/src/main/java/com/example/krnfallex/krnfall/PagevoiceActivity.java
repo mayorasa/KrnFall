@@ -84,11 +84,15 @@ public class PagevoiceActivity extends AppCompatActivity {
                     String text = result.get(0);
                     txtOutput.setText(text);
 
+                    Intent intent;
 
-
-                    if (text.equals("น้ำตกเอราวัณ"))
+                    //if (text.equals("น้ำตกเอราวัณ"))
+                    if (text.equals("น้ำตกเอราวัณ") || text.contains("เอรา"))
                     {
-                        startActivity(new Intent(PagevoiceActivity.this,PageInfoActivity.class));
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 18);
+                        startActivity(intent);
+                        //startActivity(new Intent(PagevoiceActivity.this,PageInfoActivity.class));
                     }
                     else if (text.equals("Erawan waterfall"))
                     {

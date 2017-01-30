@@ -24,6 +24,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
@@ -170,6 +171,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         //Create All Marker
         createMarker();
 
+
         //Loop
         myLoop();
 
@@ -177,6 +179,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
+
 
                 aBoolean = false;
 
@@ -188,7 +191,6 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
                         myLoop();
                     }
                 }, 5000);
-
             }
         });
 
@@ -223,6 +225,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
             aBoolean = false;
             myNotification();
         }
+
 
 
     }   // myLoop
@@ -282,7 +285,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
 
         //For Fall
         mMap.addMarker(new MarkerOptions().position(centerLatLng)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.build10))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.iconmap1))
                 .title(nameFallString));
 
         //For User

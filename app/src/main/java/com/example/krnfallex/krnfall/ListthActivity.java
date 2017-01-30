@@ -146,4 +146,10 @@ public class ListthActivity extends AppCompatActivity {
 
         return null ;
     }
+    public void clickmapth(View view) {
+        startActivity(new Intent(ListthActivity.this, MapsthlistActivity.class));
+    }
+    public void clickvoicelistth(View view) {
+        startActivity(new Intent(ListthActivity.this, PagevoiceActivity.class));
+    }
 }

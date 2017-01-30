@@ -1,8 +1,8 @@
 package com.example.krnfallex.krnfall;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,15 +13,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarkerClickListener,OnMapReadyCallback {
+public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_mapsthlist);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -29,15 +28,6 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
     }
 
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -53,7 +43,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.479800, 98.848916), 9));
 
 
-       // GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
+        // GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
         //        .findFragmentById(R.id.map)).getMap();
 
         GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
@@ -65,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกตะเคียนทอง")
                 .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap1eng))
+                        .fromResource(R.drawable.imap1th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -73,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกไดช่องถ่อง")
                 .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap2eng))
+                        .fromResource(R.drawable.imap2th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -81,7 +71,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกเกริงกระเวีย")
                 .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap3eng))
+                        .fromResource(R.drawable.imap3th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -89,7 +79,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกเขาใหญ่")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap4eng))
+                        .fromResource(R.drawable.imap4th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -97,7 +87,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกคลีตี้")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap5eng))
+                        .fromResource(R.drawable.imap5th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -105,23 +95,23 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกกระเต็งเจ็ง")
                 .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap6eng))
+                        .fromResource(R.drawable.imap6th))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.68614, 98.38082))
                 .title("น้ำตกจ๊อกกระดิ่น")
                 .snippet("อำเภอทองผาภูมิ")
-                        .icon(BitmapDescriptorFactory
-                                .fromResource(R.drawable.imap7eng))
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.imap7th))
 
-                );
+        );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.63808, 98.98662))
                 .title("น้ำตกห้วยแม่ขมิ้น")
                 .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap8eng))
+                        .fromResource(R.drawable.imap8th))
 
         );
 
@@ -130,7 +120,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกผาแป")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap9eng))
+                        .fromResource(R.drawable.imap9th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -138,7 +128,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกโป่งกระดังงา")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap10eng))
+                        .fromResource(R.drawable.imap10th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -146,7 +136,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกดิบใหญ่")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap11eng))
+                        .fromResource(R.drawable.imap11th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -154,7 +144,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกทุ่งนางครวญ")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap12eng))
+                        .fromResource(R.drawable.imap12th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -162,7 +152,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกปิเต็ง")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap13eng))
+                        .fromResource(R.drawable.imap13th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -170,7 +160,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกไตรตรึงษ์")
                 .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap14eng))
+                        .fromResource(R.drawable.imap14th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -178,7 +168,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกผาลาด")
                 .snippet("อำเภอเมือง")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap15eng))
+                        .fromResource(R.drawable.imap15th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -186,7 +176,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกผาตาด")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap16eng))
+                        .fromResource(R.drawable.imap16th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -194,7 +184,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกธารเงิน-ธารทอง")
                 .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap17eng))
+                        .fromResource(R.drawable.imap17th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -202,7 +192,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกเอราวัณ")
                 .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap18eng))
+                        .fromResource(R.drawable.imap18th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -210,7 +200,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกไทรโยคใหญ่")
                 .snippet("อำเภอไทรโยค")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap19eng))
+                        .fromResource(R.drawable.imap19th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -218,7 +208,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกไทรโยคน้อย")
                 .snippet("อำเภอไทรโยค")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap20eng))
+                        .fromResource(R.drawable.imap20th))
 
         );
         mMap.addMarker(new MarkerOptions()
@@ -226,20 +216,19 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .title("น้ำตกผาสวรรค์")
                 .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.imap21eng))
+                        .fromResource(R.drawable.imap21th))
 
         );
         mMap.setOnMarkerClickListener(this);
     }
+
     @Override
     public boolean onMarkerClick(final Marker marker) {
 
-        String name= marker.getTitle();
-        if (name.equalsIgnoreCase("น้ำตกไทรโยคน้อย"))
-        {
-            startActivity(new Intent(MapsActivity.this,page6Activity.class));
+        String name = marker.getTitle();
+        if (name.equalsIgnoreCase("น้ำตกไทรโยคน้อย")) {
+            startActivity(new Intent(MapsthlistActivity.this, page6Activity.class));
         }
         return false;
     }
-
-    }
+}
