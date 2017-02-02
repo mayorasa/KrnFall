@@ -33,14 +33,14 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng thailand = new LatLng(14.479800, 98.848916);
+        LatLng thailand = new LatLng(14.845893, 98.809198);
         mMap.addMarker(new MarkerOptions()
                 .position(thailand)
                 .title("จังหวัดกาญจนบุรี")
                 .snippet("อำเภอเมือง")
                 .snippet(getString(R.string.app_name))
         );
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.479800, 98.848916), 9));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.845893, 98.809198), 9));
 
 
         // GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
@@ -53,7 +53,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.30034, 98.44858))
                 .title("น้ำตกตะเคียนทอง")
-                .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap1th))
 
@@ -61,7 +60,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.98318, 98.62522))
                 .title("น้ำตกไดช่องถ่อง")
-                .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap2th))
 
@@ -69,7 +67,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.98160, 98.63283))
                 .title("น้ำตกเกริงกระเวีย")
-                .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap3th))
 
@@ -77,7 +74,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.67236, 98.60069))
                 .title("น้ำตกเขาใหญ่")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap4th))
 
@@ -85,7 +81,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.35751, 98.68011))
                 .title("น้ำตกคลีตี้")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap5th))
 
@@ -93,7 +88,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.023064, 98.597783))
                 .title("น้ำตกกระเต็งเจ็ง")
-                .snippet("อำเภอสังขละบุรี")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap6th))
 
@@ -101,7 +95,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.68614, 98.38082))
                 .title("น้ำตกจ๊อกกระดิ่น")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap7th))
 
@@ -109,7 +102,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.63808, 98.98662))
                 .title("น้ำตกห้วยแม่ขมิ้น")
-                .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap8th))
 
@@ -126,7 +118,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.533612, 98.655967))
                 .title("น้ำตกโป่งกระดังงา")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap10th))
 
@@ -142,7 +133,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.90583, 98.72114))
                 .title("น้ำตกทุ่งนางครวญ")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap12th))
 
@@ -158,7 +148,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.667999, 99.287217))
                 .title("น้ำตกไตรตรึงษ์")
-                .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap14th))
 
@@ -166,7 +155,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.23972, 99.34012))
                 .title("น้ำตกผาลาด")
-                .snippet("อำเภอเมือง")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap15th))
 
@@ -174,7 +162,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.65151, 98.77558))
                 .title("น้ำตกผาตาด")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap16th))
 
@@ -182,7 +169,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.67118, 99.28865))
                 .title("น้ำตกธารเงิน-ธารทอง")
-                .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap17th))
 
@@ -190,7 +176,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.36864, 99.14397))
                 .title("น้ำตกเอราวัณ")
-                .snippet("อำเภอศรีสวัสดิ์")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap18th))
 
@@ -198,7 +183,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.43859, 98.85107))
                 .title("น้ำตกไทรโยคใหญ่")
-                .snippet("อำเภอไทรโยค")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap19th))
 
@@ -206,7 +190,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.23912, 99.05742))
                 .title("น้ำตกไทรโยคน้อย")
-                .snippet("อำเภอไทรโยค")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap20th))
 
@@ -214,7 +197,6 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.75921, 98.75492))
                 .title("น้ำตกผาสวรรค์")
-                .snippet("อำเภอทองผาภูมิ")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap21th))
 
@@ -225,9 +207,133 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
     @Override
     public boolean onMarkerClick(final Marker marker) {
 
+        Intent intent;
         String name = marker.getTitle();
-        if (name.equalsIgnoreCase("น้ำตกไทรโยคน้อย")) {
-            startActivity(new Intent(MapsthlistActivity.this, page6Activity.class));
+        if (name.equalsIgnoreCase("น้ำตกตะเคียนทอง"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 1);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกไดช่องถ่อง"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 2);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกเกริงกระเวีย"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 3);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกเขาใหญ่"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 4);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกคลีตี้"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 5);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกกระเต็งเจ็ง"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 6);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกจ๊อกกระดิ่น"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 7);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกห้วยแม่ขมิ้น"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 8);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกผาแป"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 9);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกโป่งกระดังงา"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 10);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกดิบใหญ่"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 11);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกทุ่งนางครวญ"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 12);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกปิเต็ง"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 13);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกไตรตรึงษ์"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 14);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกผาลาด"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 15);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกผาตาด"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 16);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกธารเงิน-ธารทอง"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 17);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกเอราวัณ"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 18);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกไทรโยคใหญ่"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 19);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกไทรโยคน้อย"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 20);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("น้ำตกผาสวรรค์"))
+        {
+            intent = new Intent(MapsthlistActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 21);
+            startActivity(intent);
         }
         return false;
     }

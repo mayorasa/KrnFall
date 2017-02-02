@@ -87,16 +87,152 @@ public class PagevoiceActivity extends AppCompatActivity {
                     Intent intent;
 
                     //if (text.equals("น้ำตกเอราวัณ"))
-                    if (text.equals("น้ำตกเอราวัณ") || text.contains("เอรา"))
+                    if (text.equals("น้ำตกตะเคียนทอง") || text.contains("ตะเคียน"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 1);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกไดช่องถ่อง") || text.contains("ไดช่อง"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 2);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกเกริงกระเวีย") || text.contains("เกริงกระเวีย"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 3);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกเขาใหญ่") || text.contains("เขาใหญ่"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 4);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกคลิตี้") || text.contains("คลิตี้"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 5);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกกระเต็งเจ็ง") || text.contains("กระเต็ง"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 6);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกจ๊อกกระดิ่น") || text.contains("จ๊อกกระดิ่น"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 7);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกห้วยแม่ขมิ้น") || text.contains("แม่ขมิ้น"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 8);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกผาแป") || text.contains("ผาแป"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 9);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกโป่งกระดังงา") || text.contains("โป่งกระดังงา"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 10);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกดิบใหญ่") || text.contains("ดิบใหญ่"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 11);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกทุ่งนางครวญ") || text.contains("นางครวญ"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 12);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกปิเต็ง") || text.contains("ปิเต็ง"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 13);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกไตรตรึงษ์") || text.contains("ไตรตรึงษ์"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 14);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกผาลาด") || text.contains("ผาลาด"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 15);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกผาตาด") || text.contains("ผาตาด"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 16);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกธารเงิน-ธารเทอง") || text.contains("ธารเงิน") || text.contains("ธารทอง"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 17);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกเอราวัณ") || text.contains("อารา"))
                     {
                         intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
                         intent.putExtra("waterfall_id", 18);
                         startActivity(intent);
-                        //startActivity(new Intent(PagevoiceActivity.this,PageInfoActivity.class));
+
                     }
-                    else if (text.equals("Erawan waterfall"))
+                    else if (text.equals("น้ำตกไทรโยคใหญ่") || text.contains("ไทรโยคใหญ่"))
                     {
-                        startActivity(new Intent(PagevoiceActivity.this,page6Activity.class));
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 19);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกไทรโยคน้อย") || text.contains("ไทรโยคน้อย"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 20);
+                        startActivity(intent);
+
+                    }
+                    else if (text.equals("น้ำตกผาสวรรค์") || text.contains("ผาสวรรค์"))
+                    {
+                        intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
+                        intent.putExtra("waterfall_id", 21);
+                        startActivity(intent);
+
                     }
                 }
 

@@ -10,6 +10,7 @@
     tools:context="com.example.krnfallex.krnfall.PageInfoActivity"
     android:background="@drawable/page3th1"
     android:id="@+id/imgbg">
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -21,10 +22,11 @@
             android:layout_marginTop="67dp"
             android:textColor="#ffffff"
             android:textSize="@dimen/h1"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentTop="true"/>
+
 
     </RelativeLayout>
+
 
     <ScrollView
 
@@ -36,13 +38,32 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
         android:layout_alignParentEnd="true"
-        android:id="@+id/scrollView">
+        android:id="@+id/scrollView"
+        android:theme="@style/BrandedCheckBox">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layoutyoutube"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <android.support.v4.view.ViewPager
+
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:id="@+id/youtubeplayerfragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible" />
+            </LinearLayout>
+
+        <android.support.v4.view.ViewPager
                 android:layout_width="264dp"
                 android:layout_height="190dp"
                 android:id="@+id/viewPager"
@@ -73,19 +94,65 @@
                 android:textColor="@color/material_grey_100"
                 android:textSize="@dimen/h0"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtseason"
+                android:textColor="@color/material_grey_100"
+                android:textSize="@dimen/h0"
+                android:textStyle="bold"/>
+
+            <CheckBox
+                android:text="@string/txt_hotseasonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox1"
+                android:visibility="gone"
+                android:contextClickable="false"
+                android:button="@drawable/custom_checkbox"
+                android:clickable="false"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:text="@string/txt_coolseasonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2"
+                android:visibility="gone"
+                android:contextClickable="false"
+                android:clickable="false"
+                android:button="@drawable/custom_checkbox"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:text="@string/txt_rainseasonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3"
+                android:visibility="gone"
+                android:contextClickable="false"
+                android:button="@drawable/custom_checkbox"
+                android:clickable="false"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView8" />
+                android:id="@+id/textView8"
+                android:textColor="@color/material_grey_100"
+                android:textSize="@dimen/h0"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/texttravelth"
                 android:textColor="@color/material_grey_100"
-                android:textSize="@dimen/h0"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/h0" />
 
         </LinearLayout>
     </ScrollView>
@@ -97,34 +164,21 @@
         android:background="#00000000"
         android:layout_marginTop="5dp"
         android:layout_alignTop="@+id/scrollView"
-        android:layout_alignStart="@+id/imageButton6"
         android:layout_gravity="left"
         android:layout_alignParentEnd="false"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        android:onClick="titleview" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icstar"
-        android:id="@+id/imageButton8"
-        android:background="#00000000"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/imageButton7"
-        android:layout_alignLeft="@+id/imageButton6"
-        android:layout_gravity="left"
-        android:layout_marginTop="8dp"
-        android:onClick="historyth" />
+        android:onClick="titleview"
+        />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic360"
         android:id="@+id/imageButton9"
-        android:onClick="clicyoutube1"
-        android:background="#00000000"
+        android:onClick="clickvitualreality"
         android:layout_alignParentEnd="true"
+        android:background="#00000000"
         android:layout_below="@+id/imageButton8"
         android:layout_alignLeft="@+id/imageButton6"
         android:layout_gravity="left"
@@ -162,6 +216,19 @@
         android:layout_alignParentStart="true"
         android:background="#00000000"
         android:onClick="btrtif" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icstar"
+        android:id="@+id/imageButton8"
+        android:background="#00000000"
+        android:layout_gravity="left"
+        android:onClick="historyth"
+        android:layout_below="@+id/imageButton7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"/>
 
 
 </RelativeLayout>

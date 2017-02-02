@@ -146,10 +146,21 @@ public class ListthActivity extends AppCompatActivity {
 
         return null ;
     }
-    public void clickmapth(View view) {
-        startActivity(new Intent(ListthActivity.this, MapsthlistActivity.class));
-    }
+
     public void clickvoicelistth(View view) {
         startActivity(new Intent(ListthActivity.this, PagevoiceActivity.class));
+    }
+    public void listmap(View view) {
+        startActivity(new Intent(ListthActivity.this, MapsActivity.class));
+        Intent intent;
+        intent = new Intent(ListthActivity.this, MapsthlistActivity.class);
+        intent.putExtra("waterfall_id", waterfall_id);
+        intent.putExtra("name_th", name_th);
+        startActivity(intent);
+
+
+
+
+
     }
 }

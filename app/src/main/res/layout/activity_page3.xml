@@ -78,6 +78,26 @@
 
         </RelativeLayout>
 
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_marginTop="144dp"
+            android:layout_alignTop="@+id/button9"
+            android:layout_centerHorizontal="true"
+            android:onClick="you" />
+
+        <Button
+            android:text="go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_below="@+id/button3"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:layout_marginTop="72dp" />
+
     </RelativeLayout>
 
 </RelativeLayout>

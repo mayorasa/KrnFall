@@ -7,76 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.krnfallex.krnfall.page4Activity"
-    android:background="@drawable/mapth">
+    tools:context="com.example.krnfallex.krnfall.page4Activity">
 
-    <FrameLayout
+
+
+
+
+    <fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:id="@+id/youtubeplayerfragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:id="@+id/linearLayout">
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignBottom="@+id/button6"
-                android:layout_alignParentStart="true">
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button14"
-                    android:background="#00000000"
-                    android:onClick="clickreternpmapth" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button4"
-                    android:background="#00000000"
-                    android:onClick="clickarawan"
-                    android:layout_marginBottom="183dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
-            </RelativeLayout>
-
-            <Button
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button6"
-                android:onClick="clickmap"
-                android:background="#00000000"
-                android:textSize="@dimen/h1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
-
-        </RelativeLayout>
-
-    </FrameLayout>
-
-    <Button
-        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:onClick="clickreternpmapth"
-        android:background="#00000005"
-        android:textSize="@dimen/h1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
 
 </RelativeLayout>

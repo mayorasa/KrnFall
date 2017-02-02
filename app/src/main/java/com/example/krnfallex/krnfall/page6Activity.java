@@ -14,9 +14,18 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
+import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
+import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 
 public class page6Activity extends AppCompatActivity {
@@ -40,17 +49,17 @@ public class page6Activity extends AppCompatActivity {
         //myCustomPagerAdapter = new MyCustomPagerAdapter(page6Activity.this, images);
         //viewPager.setAdapter(myCustomPagerAdapter);
 
-       // TextView text2 = (TextView) findViewById(R.id.textView4);
+        // TextView text2 = (TextView) findViewById(R.id.textView4);
         //text2.setText(R.string.txt_null);
 
 
-       // ImageView kuysah = (ImageView) findViewById(R.id.viewPager);
-       // kuysah.setVisibility(View.VISIBLE);
+        // ImageView kuysah = (ImageView) findViewById(R.id.viewPager);
+        // kuysah.setVisibility(View.VISIBLE);
 
         //viewPager = (ViewPager)findViewById(R.id.viewPager);
         //viewPager.setVisibility(View.GONE);
-    }
 
+    }
 
 
     ImageButton b;
@@ -123,4 +132,6 @@ public class page6Activity extends AppCompatActivity {
 
 
     }
+
+
 }

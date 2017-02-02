@@ -18,10 +18,13 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
     private GoogleMap mMap;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -43,14 +46,13 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng thailand = new LatLng(14.479800, 98.848916);
+        LatLng thailand = new LatLng(14.845893, 98.809198);
         mMap.addMarker(new MarkerOptions()
                 .position(thailand)
-                .title("จังหวัดกาญจนบุรี")
-                .snippet("อำเภอเมือง")
+                .title("KANCHABURI")
                 .snippet(getString(R.string.app_name))
         );
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.479800, 98.848916), 9));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.845893, 98.809198), 9));
 
 
        // GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
@@ -62,64 +64,56 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.30034, 98.44858))
-                .title("น้ำตกตะเคียนทอง")
-                .snippet("อำเภอสังขละบุรี")
+                .title("TAKIEN THONG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap1eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.98318, 98.62522))
-                .title("น้ำตกไดช่องถ่อง")
-                .snippet("อำเภอสังขละบุรี")
+                .title("DAI CHONG THONG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap2eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.98160, 98.63283))
-                .title("น้ำตกเกริงกระเวีย")
-                .snippet("อำเภอสังขละบุรี")
+                .title("KROENGKAWIA FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap3eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.67236, 98.60069))
-                .title("น้ำตกเขาใหญ่")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("KHAO YAI FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap4eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.35751, 98.68011))
-                .title("น้ำตกคลีตี้")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("CLITI FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap5eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(15.023064, 98.597783))
-                .title("น้ำตกกระเต็งเจ็ง")
-                .snippet("อำเภอสังขละบุรี")
+                .title("KRA TENG JENG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap6eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.68614, 98.38082))
-                .title("น้ำตกจ๊อกกระดิ่น")
-                .snippet("อำเภอทองผาภูมิ")
-                        .icon(BitmapDescriptorFactory
-                                .fromResource(R.drawable.imap7eng))
+                .title("JOKKRADIN FALL")
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.imap7eng))
 
                 );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.63808, 98.98662))
-                .title("น้ำตกห้วยแม่ขมิ้น")
-                .snippet("อำเภอศรีสวัสดิ์")
+                .title("MAEKHAMIN FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap8eng))
 
@@ -127,104 +121,91 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.66461, 98.38507))
-                .title("น้ำตกผาแป")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("PARPAE FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap9eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.533612, 98.655967))
-                .title("น้ำตกโป่งกระดังงา")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("PONGKRADANGNGA FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap10eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.69191, 98.40564))
-                .title("น้ำตกดิบใหญ่")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("LARGE RAW FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap11eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.90583, 98.72114))
-                .title("น้ำตกทุ่งนางครวญ")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("THUNG NANG KRUAN FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap12eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.67623, 98.37843))
-                .title("น้ำตกปิเต็ง")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("PI TENG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap13eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.667999, 99.287217))
-                .title("น้ำตกไตรตรึงษ์")
-                .snippet("อำเภอศรีสวัสดิ์")
+                .title("TRAI TRUENG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap14eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.23972, 99.34012))
-                .title("น้ำตกผาลาด")
-                .snippet("อำเภอเมือง")
+                .title("PHALAD FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap15eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.65151, 98.77558))
-                .title("น้ำตกผาตาด")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("PHATAD FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap16eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.67118, 99.28865))
-                .title("น้ำตกธารเงิน-ธารทอง")
-                .snippet("อำเภอศรีสวัสดิ์")
+                .title("THAN NGERN THAN THONG FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap17eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.36864, 99.14397))
-                .title("น้ำตกเอราวัณ")
-                .snippet("อำเภอศรีสวัสดิ์")
+                .title("ERAWAN FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap18eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.43859, 98.85107))
-                .title("น้ำตกไทรโยคใหญ่")
-                .snippet("อำเภอไทรโยค")
+                .title("SAI YOK YAI FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap19eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.23912, 99.05742))
-                .title("น้ำตกไทรโยคน้อย")
-                .snippet("อำเภอไทรโยค")
+                .title("SAI YOK NOI FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap20eng))
 
         );
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(14.75921, 98.75492))
-                .title("น้ำตกผาสวรรค์")
-                .snippet("อำเภอทองผาภูมิ")
+                .title("PHA SAWAN FALL")
                 .icon(BitmapDescriptorFactory
                         .fromResource(R.drawable.imap21eng))
 
@@ -234,10 +215,15 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
     @Override
     public boolean onMarkerClick(final Marker marker) {
 
+
+        Intent intent;
+
         String name= marker.getTitle();
-        if (name.equalsIgnoreCase("น้ำตกไทรโยคน้อย"))
+        if (name.equalsIgnoreCase("SAI YOK NOI FALL"))
         {
-            startActivity(new Intent(MapsActivity.this,page6Activity.class));
+            intent = new Intent(MapsActivity.this, PageInfoActivity.class);
+            intent.putExtra("waterfall_id", 20);
+            startActivity(intent);
         }
         return false;
     }

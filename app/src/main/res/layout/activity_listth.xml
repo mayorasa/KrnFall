@@ -85,7 +85,7 @@
             android:layout_alignEnd="@+id/relativeLayout3"
             android:layout_marginTop="406dp"
             android:contextClickable="false"
-            android:onClick="clickmapth" />
+            android:onClick="listmap" />
 
         <Button
             android:layout_width="wrap_content"

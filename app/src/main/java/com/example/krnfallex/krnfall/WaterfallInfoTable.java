@@ -31,7 +31,8 @@ public class WaterfallInfoTable {
     public static final String latitude = "latitude";
     public static final String longitude = "longitude";
     public static final String url360 = "url360";
-    public static final String video_path = "video_path";
+    public static final String videoth_path = "videoth_path";
+    public static final String videoeng_path = "videoeng_path";
     public static final String listmg = "listmg";
     public static final String tellophone = "tellophone";
     public Integer countImg = 0;
@@ -46,7 +47,7 @@ public class WaterfallInfoTable {
     //Add New Value
     public long addNewValueToSQLite(int int_idwaterfall, String str_nameth, String str_nameeng, String str_genaralth, String str_genaraleng,
                                     String str_historyth, String str_historyeng, String str_feeth, String str_feeeng, String str_travelth,
-                                    String str_traveleng, String str_latitude, String str_longitude, String str_url360, String str_videopath,String str_tellophone) {
+                                    String str_traveleng, String str_latitude, String str_longitude, String str_url360, String str_videothpath,String str_videoengpath,String str_tellophone) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(name_th, str_nameth);
         contentValues.put(name_eng, str_nameeng);
@@ -61,7 +62,8 @@ public class WaterfallInfoTable {
         contentValues.put(latitude, str_latitude);
         contentValues.put(longitude, str_longitude);
         contentValues.put(url360, str_url360);
-        contentValues.put(video_path, str_videopath);
+        contentValues.put(videoth_path, str_videothpath);
+        contentValues.put(videoeng_path, str_videoengpath);
         contentValues.put(tellophone, str_tellophone);
         long waterfall_Table_id = writeSQLite.insert(waterfall_info, null, contentValues);
         return waterfall_Table_id;
@@ -101,7 +103,8 @@ public class WaterfallInfoTable {
                 hm.put("latitude", cursor.getString(cursor.getColumnIndex("latitude")));
                 hm.put("longitude", cursor.getString(cursor.getColumnIndex("longitude")));
                 hm.put("url360", cursor.getString(cursor.getColumnIndex("url360")));
-                hm.put("video_path", cursor.getString(cursor.getColumnIndex("video_path")));
+                hm.put("videoth_path", cursor.getString(cursor.getColumnIndex("videoth_path")));
+                hm.put("videoeng_path", cursor.getString(cursor.getColumnIndex("videoeng_path")));
                 hm.put("tellophone", cursor.getString(cursor.getColumnIndex("tellophone")));
                // hm.put("tellophone", cursor.getString(cursor.getColumnIndex("tellophone")));
 
@@ -140,7 +143,8 @@ public class WaterfallInfoTable {
                 hm.put("latitude", cursor.getString(cursor.getColumnIndex("latitude")));
                 hm.put("longitude", cursor.getString(cursor.getColumnIndex("longitude")));
                 hm.put("url360", cursor.getString(cursor.getColumnIndex("url360")));
-                hm.put("video_path", cursor.getString(cursor.getColumnIndex("video_path")));
+                hm.put("videoth_path", cursor.getString(cursor.getColumnIndex("videoth_path")));
+                hm.put("videoeng_path", cursor.getString(cursor.getColumnIndex("videoeng_path")));
 
                 if (countImg == 0) {
                     hm.put(listmg, Integer.toString(imgsList[0]));
@@ -228,7 +232,8 @@ public class WaterfallInfoTable {
                 falldb.put(latitude, cursor.getString(cursor.getColumnIndex(latitude)));
                 falldb.put(longitude, cursor.getString(cursor.getColumnIndex(longitude)));
                 falldb.put(url360, cursor.getString(cursor.getColumnIndex(url360)));
-                falldb.put(video_path, cursor.getString(cursor.getColumnIndex(video_path)));
+                falldb.put(videoth_path, cursor.getString(cursor.getColumnIndex(videoth_path)));
+                falldb.put(videoeng_path, cursor.getString(cursor.getColumnIndex(videoeng_path)));
                 //falldb.put(tellophone, cursor.getString(cursor.getColumnIndex(tellophone)));
                 waterfallList.add(falldb);
 
