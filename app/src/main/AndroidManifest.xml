@@ -26,7 +26,7 @@
     <application
         android:name=".MyFont"
         android:allowBackup="true"
-        android:icon="@drawable/build10"
+        android:icon="@drawable/icapp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -78,7 +78,9 @@
         <activity
             android:name=".MapsthlistActivity"
             android:label="@string/title_activity_mapsthlist" />
-        <activity android:name=".VirtualReality"></activity>
+        <activity android:name=".VirtualReality" />
+        <activity android:name=".ListEngActivity" />
+        <activity android:name=".PageInfoEngActivity"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.krnfallex.krnfall;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -337,4 +338,9 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
         }
         return false;
     }
+    public void buttonlist(View view) {
+        startActivity(new Intent(MapsthlistActivity.this, ListthActivity.class));
+    }
+
+
 }

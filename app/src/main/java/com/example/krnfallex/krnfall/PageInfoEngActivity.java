@@ -41,7 +41,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import static com.example.krnfallex.krnfall.R.id.frameLayout3;
 import static com.example.krnfallex.krnfall.R.id.youtubeplayerfragment;
 
-public class PageInfoActivity extends YouTubeBaseActivity
+public class PageInfoEngActivity extends YouTubeBaseActivity
         implements YouTubePlayer.OnInitializedListener{
 
     WaterfallSeason waterfallSeason;
@@ -49,7 +49,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
     WaterfallInfoTable waterfallInfoTable;
     HashMap<String, String> infodetail;
     HashMap<String, Integer> infoseason;
-    TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth, in_url360, in_video_path, in_tellophone;
+    TextView in_nameeng, in_genaraleng, in_historyeng, in_feeeng, in_traveleng, in_url360, in_video_path, in_tellophone;
     Double tatal;
     EditText editCal_Total;
     SimpleDateFormat df_show;
@@ -70,16 +70,15 @@ public class PageInfoActivity extends YouTubeBaseActivity
     private static String VIDEO_ID;
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerFragment myYouTubePlayerFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page_info);
-
+        setContentView(R.layout.activity_page_info_eng);
 
         imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
         imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
         imageButtoncallth = (ImageButton) findViewById(R.id.imageButtoncallth);
-
 
         //YouTube
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()
@@ -87,21 +86,13 @@ public class PageInfoActivity extends YouTubeBaseActivity
         myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
         //end myYouTubePlayerFragment
 
-
-       // waterfallSeason.GetName();
-
-
-
         waterfallimageTable = new WaterfallimageTable(this);
         bitmapArray = new ArrayList<Bitmap>();
         waterfallInfoTable = new WaterfallInfoTable(this);
 
-
-
         viewPager = (ViewPager)findViewById(R.id.viewPager);
 
         linearLayout = (LinearLayout)findViewById(R.id.layoutyoutube);
-
 
         //รับค่าแต่ละหน้า Show id
         Intent intent2 = getIntent();
@@ -144,22 +135,14 @@ public class PageInfoActivity extends YouTubeBaseActivity
 
         infodetail = waterfallInfoTable.WalterfallInfo(waterfall_id);
 
-        urlvedio = infodetail.get("videoth_path");
+        urlvedio = infodetail.get("videoeng_path");
         VIDEO_ID = urlvedio;
 
-        in_nameth = (TextView) findViewById(R.id.namefallth);
-        in_genaralth = (TextView) findViewById(R.id.txtgeneralth);
-        in_feeth = (TextView) findViewById(R.id.txtfeeth);
-
-
-
-        in_nameth.setText(infodetail.get("name_th"));
-        in_genaralth.setText(infodetail.get("genaral_th"));
-
-        Log.d("28janV1", "ทดสอบการ Get ชื่อน้ำตก ==> " + infodetail.get("name_th"));
-        Log.d("28janV1", "ทดสอบการ Get Lat ==> " + infodetail.get("latitude"));
-        Log.d("28janV1", "ทดสอบการ Get Lng ==> " + infodetail.get("longitude"));
-
+        in_nameeng = (TextView) findViewById(R.id.namefallth);
+        in_nameeng.setText(infodetail.get("name_eng"));
+        in_genaraleng = (TextView) findViewById(R.id.txtgeneralth);
+        in_genaraleng.setText(infodetail.get("general_eng"));
+        in_feeeng = (TextView) findViewById(R.id.txtfeeth);
 
         RelativeLayout d = (RelativeLayout) findViewById(R.id.imgbg);
 
@@ -231,8 +214,6 @@ public class PageInfoActivity extends YouTubeBaseActivity
             d.setBackgroundResource(R.drawable.pagelsth21);
         }
 
-
-
         mDialogSimple = (ImageButton) findViewById(R.id.imageButtoncallth);
         mDialogSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,16 +222,16 @@ public class PageInfoActivity extends YouTubeBaseActivity
                 numberPhone = infodetail.get("tellophone");
 
                 AlertDialog.Builder builder =
-                        new AlertDialog.Builder(PageInfoActivity.this);
+                        new AlertDialog.Builder(PageInfoEngActivity.this);
                 builder.setMessage(numberPhone);
-                builder.setPositiveButton("โทร", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Tel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Intent callIntent = new Intent(Intent.ACTION_CALL);
                         callIntent.setData(Uri.parse("tel:" + numberPhone));
                         startActivity(callIntent);
                     }
                 });
-                builder.setNegativeButton("ยกเลิก", null);
+                builder.setNegativeButton("Cancel", null);
                 builder.create();
 
                 // สุดท้ายอย่าลืม show() ด้วย
@@ -262,8 +243,6 @@ public class PageInfoActivity extends YouTubeBaseActivity
             }
         });
 
-
-        /////
         listImage = waterfallimageTable.getListImage(waterfall_id);
         for (int i=0; i < listImage.size(); i++)
         {
@@ -274,14 +253,13 @@ public class PageInfoActivity extends YouTubeBaseActivity
         }
 
         ////
-        myCustomPagerAdapter = new MyCustomPagerAdapter(PageInfoActivity.this, bitmapArray);
+        myCustomPagerAdapter = new MyCustomPagerAdapter(PageInfoEngActivity.this, bitmapArray);
         viewPager.setAdapter(myCustomPagerAdapter);
     }   // Main Class
-
     public void clickGpsFall(View view) {
 
-        Intent intent = new Intent(PageInfoActivity.this, GpsFall.class);
-        intent.putExtra("NameFall", infodetail.get("name_th"));
+        Intent intent = new Intent(PageInfoEngActivity.this, GpsFall.class);
+        intent.putExtra("NameFall", infodetail.get("name_eng"));
         intent.putExtra("Lat", infodetail.get("latitude"));
         intent.putExtra("Lng", infodetail.get("longitude"));
         startActivity(intent);
@@ -290,17 +268,16 @@ public class PageInfoActivity extends YouTubeBaseActivity
 
     public void clickvitualreality(View view) {
 
-        Intent intent = new Intent(PageInfoActivity.this, VirtualReality.class);
-        intent.putExtra("FallName", infodetail.get("name_th"));
+        Intent intent = new Intent(PageInfoEngActivity.this, VirtualReality.class);
+        intent.putExtra("FallName", infodetail.get("name_eng"));
         intent.putExtra("urlvr", infodetail.get("url360"));
         startActivity(intent);
 
     }
 
-
     public void titleview(View v) {
         TextView text = (TextView) findViewById(R.id.txtgeneralth);
-        in_genaralth.setText(infodetail.get("genaral_th"));
+        in_genaraleng.setText(infodetail.get("genaral_eng"));
         TextView text2 = (TextView) findViewById(R.id.textView7);
         text2.setText(R.string.txt_null);
         TextView text3 = (TextView) findViewById(R.id.txtfeeth);
@@ -332,14 +309,14 @@ public class PageInfoActivity extends YouTubeBaseActivity
     }
 
     public void historyth(View v) {
-        in_historyth = (TextView) findViewById(R.id.txtgeneralth);
-        in_historyth.setText(infodetail.get("history_th"));
+        in_historyeng = (TextView) findViewById(R.id.txtgeneralth);
+        in_historyeng.setText(infodetail.get("history_eng"));
         TextView text2 = (TextView) findViewById(R.id.textView7);
-        text2.setText(R.string.txt_feeth);
-        in_feeth = (TextView) findViewById(R.id.txtfeeth);
-        in_feeth.setText(infodetail.get("fee_th"));
+        text2.setText(R.string.txt_feeeng);
+        in_feeeng = (TextView) findViewById(R.id.txtfeeth);
+        in_feeeng.setText(infodetail.get("fee_eng"));
         TextView text3 = (TextView) findViewById(R.id.txtseason);
-        text3.setText(R.string.txt_seasonth);
+        text3.setText(R.string.txt_seasoneng);
         checkBox = (CheckBox) findViewById(R.id.checkBox1);
         checkBox.setVisibility(View.VISIBLE);
         checkBox = (CheckBox) findViewById(R.id.checkBox2);
@@ -347,24 +324,21 @@ public class PageInfoActivity extends YouTubeBaseActivity
         checkBox = (CheckBox) findViewById(R.id.checkBox3);
         checkBox.setVisibility(View.VISIBLE);
         TextView text4 = (TextView) findViewById(R.id.textView8);
-        text4.setText(R.string.txt_travelth);
-        in_travelth = (TextView) findViewById(R.id.texttravelth);
-        in_travelth.setText(infodetail.get("travel_th"));
+        text4.setText(R.string.txt_traveleng);
+        in_traveleng = (TextView) findViewById(R.id.texttravelth);
+        in_traveleng.setText(infodetail.get("travel_eng"));
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setVisibility(View.VISIBLE);
 
-        myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()
+        myYouTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(youtubeplayerfragment);
 
         linearLayout.setVisibility(View.GONE);
         imageButton7.setImageResource(R.drawable.icinfowhite);
         imageButton8.setImageResource(R.drawable.icstaryellow);
         imageButtoncallth.setImageResource(R.drawable.icplay);
-
     }
-
-
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
@@ -391,12 +365,8 @@ public class PageInfoActivity extends YouTubeBaseActivity
     }
     //End การทำงานดึง api youtube ออกมาแสดง
     public void btrtif(View view) {
-        startActivity(new Intent(PageInfoActivity.this, ListthActivity.class));
+        startActivity(new Intent(PageInfoEngActivity.this, ListEngActivity.class));
     }
 
 
 }
-
-
-
-

@@ -32,13 +32,13 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ListthActivity extends AppCompatActivity {
+public class ListEngActivity extends AppCompatActivity {
 
     ListView listView;
     ListAdapter listAdapter;
     WaterfallInfoTable waterfallnfoTable;
-    ArrayList<HashMap<String, Object>> ListthActivity;
-    String name_th ;
+    ArrayList<HashMap<String, Object>> ListEngActivity;
+    String name_eng ;
     int waterfall_id;
     SQLiteDatabase db;
     ImageView listmg;
@@ -53,7 +53,7 @@ public class ListthActivity extends AppCompatActivity {
         //setSupportActionBar(toolbar);
 
 
-        setContentView(R.layout.activity_listth);
+        setContentView(R.layout.activity_list_eng);
         listView = (ListView) findViewById(R.id.listView);
         waterfallnfoTable = new WaterfallInfoTable(this);
 
@@ -64,19 +64,19 @@ public class ListthActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                waterfall_id = Integer.parseInt(ListthActivity.get(i).get(waterfallnfoTable.waterfall_id).toString());
-                name_th = ListthActivity.get(i).get(waterfallnfoTable.name_th).toString();
+                waterfall_id = Integer.parseInt(ListEngActivity.get(i).get(waterfallnfoTable.waterfall_id).toString());
+                name_eng = ListEngActivity.get(i).get(waterfallnfoTable.name_eng).toString();
                 Intent intent;
-                intent = new Intent(ListthActivity.this, PageInfoActivity.class);
+                intent = new Intent(ListEngActivity.this, PageInfoEngActivity.class);
                 intent.putExtra("waterfall_id", waterfall_id);
                 startActivity(intent);
 
             };
 
         });
-        ListthActivity = waterfallnfoTable.getImage();
+        ListEngActivity = waterfallnfoTable.getImageEng();
 
-        listAdapter = new SimpleAdapter(ListthActivity.this, ListthActivity, R.layout.falllist, new String[]{waterfallnfoTable.listmg,waterfallnfoTable.name_th}, new int[]{R.id.listmg,});
+        listAdapter = new SimpleAdapter(ListEngActivity.this, ListEngActivity, R.layout.falllist, new String[]{waterfallnfoTable.listmg,waterfallnfoTable.name_eng}, new int[]{R.id.listmg,});
 
         listView.setAdapter(listAdapter);
 
@@ -88,23 +88,23 @@ public class ListthActivity extends AppCompatActivity {
                 //ArrayList<HashMap<String, Objects>> src_list = new ArrayList<HashMap<String, Objects>>();
                 int textlength = editText1.getText().length();
                 if (textlength > 0) {
-                    for (int i = 0; i < ListthActivity.size(); i++) {
+                    for (int i = 0; i < ListEngActivity.size(); i++) {
                         try {
                             HashMap<String, Object> hm = new HashMap<String, Object>();
-                            if (containsIgnoreCase(ListthActivity.get(i).get(waterfallnfoTable.name_th).toString(), editText1.getText().toString())) {
-                                hm.put("listmg", Integer.toString(waterfallnfoTable.imgsList[i]));
+                            if (containsIgnoreCase(ListEngActivity.get(i).get(waterfallnfoTable.name_eng).toString(), editText1.getText().toString())) {
+                                hm.put("listmg", Integer.toString(waterfallnfoTable.imgsListEng[i]));
                                 src_list.add(hm);
                             }
                         } catch (Exception e) {
                         }
                     }
 
-                    listAdapter = new SimpleAdapter(ListthActivity.this, src_list, R.layout.falllist, new String[]{waterfallnfoTable.listmg, waterfallnfoTable.name_th}, new int[]{R.id.listmg,});
+                    listAdapter = new SimpleAdapter(ListEngActivity.this, src_list, R.layout.falllist, new String[]{waterfallnfoTable.listmg, waterfallnfoTable.name_eng}, new int[]{R.id.listmg,});
                     listView.setAdapter(listAdapter);
                 }
                 else
                 {
-                    listAdapter = new SimpleAdapter(ListthActivity.this, ListthActivity, R.layout.falllist, new String[]{waterfallnfoTable.listmg,waterfallnfoTable.name_th}, new int[]{R.id.listmg,});
+                    listAdapter = new SimpleAdapter(ListEngActivity.this, ListEngActivity, R.layout.falllist, new String[]{waterfallnfoTable.listmg,waterfallnfoTable.name_eng}, new int[]{R.id.listmg,});
                     listView.setAdapter(listAdapter);
                 }
 
@@ -117,20 +117,20 @@ public class ListthActivity extends AppCompatActivity {
         });
 
 
-        }
+    }
 
-    public boolean containsIgnoreCase( String nameth, String search_nameth ) {
-        if(search_nameth.equals(""))
+    public boolean containsIgnoreCase( String nameeng, String search_nameeng ) {
+        if(search_nameeng.equals(""))
             return true;
-        if(nameth == null || search_nameth == null || nameth .equals(""))
+        if(nameeng == null || search_nameeng == null || nameeng .equals(""))
             return false;
 
-        Pattern p = Pattern.compile(search_nameth,Pattern.CASE_INSENSITIVE+Pattern.LITERAL);
-        Matcher m = p.matcher(nameth);
+        Pattern p = Pattern.compile(search_nameeng,Pattern.CASE_INSENSITIVE+Pattern.LITERAL);
+        Matcher m = p.matcher(nameeng);
         return m.find();
     }
 
-    public Bitmap getImage(int i){
+    public Bitmap getImageEng(int i){
 
         String qu = "select listmg waterfall table where feedid=" + i ;
         Cursor cur = db.rawQuery(qu, null);
@@ -148,13 +148,13 @@ public class ListthActivity extends AppCompatActivity {
     }
 
     public void clickvoicelistth(View view) {
-        startActivity(new Intent(ListthActivity.this, PagevoiceActivity.class));
+        startActivity(new Intent(ListEngActivity.this, PagevoiceActivity.class));
     }
     public void listmap(View view) {
         Intent intent;
-        intent = new Intent(ListthActivity.this, MapsthlistActivity.class);
+        intent = new Intent(ListEngActivity.this, MapsActivity.class);
         intent.putExtra("waterfall_id", waterfall_id);
-        intent.putExtra("name_th", name_th);
+        intent.putExtra("name_eng", name_eng);
         startActivity(intent);
 
 
@@ -163,6 +163,6 @@ public class ListthActivity extends AppCompatActivity {
 
     }
     public void buttonback(View view) {
-        startActivity(new Intent(ListthActivity.this, MainActivity.class));
+        startActivity(new Intent(ListEngActivity.this, MainActivity.class));
     }
 }

@@ -23,11 +23,14 @@ Most tears are running into ponds, great for swimming. There are few picnic spot
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="txt_searchth">ค้นหาน้ำตก... </string>
+    <string name="txt_searcheng">Search... </string>
     <string name="txt_feeth">ค่าบริการสำหรับบุคคล</string>
+    <string name="txt_feeeng">Admission Fees</string>
     <string name="txt_null"></string>
     <string name="txt_seasonth">ฤดูกาลท่องเที่ยว</string>
     <string name="txt_seasoneng">Season Travel</string>
     <string name="txt_travelth">การเดินทาง</string>
+    <string name="txt_traveleng">Travel</string>
     <string name="txt_hotseasonth">ฤดูร้อน</string>
     <string name="txt_hotseasoneng">Summer</string>
     <string name="txt_coolseasonth">ฤดูหนาว</string>

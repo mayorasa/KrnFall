@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.krnfallex.krnfall.ListthActivity"
-    android:background="@drawable/bglsth">
+    tools:context="com.example.krnfallex.krnfall.ListEngActivity"
+    android:background="@drawable/bglisteng">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                 android:layout_width="245dp"
                 android:layout_height="45dp"
                 android:id="@+id/editText"
-                android:hint="@string/txt_searchth"
+                android:hint="@string/txt_searcheng"
                 android:textIsSelectable="false"
                 android:clickable="false"
                 android:autoText="false"
@@ -113,10 +113,4 @@
 
     </RelativeLayout>
 
-
 </RelativeLayout>
-
-
-
-
-

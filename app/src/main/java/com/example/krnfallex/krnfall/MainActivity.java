@@ -1,5 +1,6 @@
 package com.example.krnfallex.krnfall;
 
+import android.app.*;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -25,12 +26,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickEng(View view) {
-        startActivity(new Intent(MainActivity.this, page3Activity.class));
+        startActivity(new Intent(MainActivity.this, ListEngActivity.class));
     }
 
-    public void clicklist(View view) {
-       // startActivity(new Intent(MainActivity.this, page2Activity.class));
-    }
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));

@@ -3,6 +3,7 @@ package com.example.krnfallex.krnfall;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -219,13 +220,136 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
         Intent intent;
 
         String name= marker.getTitle();
-        if (name.equalsIgnoreCase("SAI YOK NOI FALL"))
+        if (name.equalsIgnoreCase("TAKIEN THONG FALL FALL"))
         {
-            intent = new Intent(MapsActivity.this, PageInfoActivity.class);
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 1);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("DAI CHONG THONG FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 2);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("KROENGKAWIA FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 3);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("KHAO YAI FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 4);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("CLITI FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 5);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("KRA TENG JENG FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 6);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("JOKKRADIN FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 7);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("MAEKHAMIN FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 8);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("PARPAE FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 9);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("PONGKRADANGNGA FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 10);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("LARGE RAW FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 11);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("THUNG NANG KRUAN FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 12);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("PI TENG FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 13);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("TRAI TRUENG FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 14);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("PHALAD FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 15);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("PHATAD FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 16);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("THAN NGERN THAN THONG FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 17);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("ERAWAN FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 18);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("SAI YOK YAI FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 19);
+            startActivity(intent);
+        }
+        else if (name.equalsIgnoreCase("SAI YOK NOI FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
             intent.putExtra("waterfall_id", 20);
             startActivity(intent);
         }
+        else if (name.equalsIgnoreCase("PHA SAWAN FALL"))
+        {
+            intent = new Intent(MapsActivity.this, PageInfoEngActivity.class);
+            intent.putExtra("waterfall_id", 21);
+            startActivity(intent);
+        }
         return false;
-    }
 
+    }
+    public void buttonlist(View view) {
+        startActivity(new Intent(MapsActivity.this, ListEngActivity.class));
+    }
     }
