@@ -19,10 +19,16 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/namefallth"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="75dp"
             android:textColor="#ffffff"
-            android:textSize="@dimen/h1"
-            android:layout_alignParentTop="true"/>
+            android:textSize="@dimen/H0"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="13dp"
+            android:layout_marginEnd="10dp" />
 
 
     </RelativeLayout>
@@ -119,7 +125,7 @@
                     android:textSize="16sp"
                     android:layout_weight="1.52"
                     android:paddingLeft="5dp"
-                    android:layout_marginLeft="20dp" />
+                    android:layout_marginLeft="10dp" />
 
                 <CheckBox
                     android:text="@string/txt_coolseasoneng"

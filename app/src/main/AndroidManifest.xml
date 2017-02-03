@@ -80,7 +80,8 @@
             android:label="@string/title_activity_mapsthlist" />
         <activity android:name=".VirtualReality" />
         <activity android:name=".ListEngActivity" />
-        <activity android:name=".PageInfoEngActivity"></activity>
+        <activity android:name=".PageInfoEngActivity" />
+        <activity android:name=".PagevoiceEngActivity"></activity>
     </application>
 
 </manifest>

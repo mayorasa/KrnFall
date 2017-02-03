@@ -148,7 +148,7 @@ public class ListEngActivity extends AppCompatActivity {
     }
 
     public void clickvoicelistth(View view) {
-        startActivity(new Intent(ListEngActivity.this, PagevoiceActivity.class));
+        startActivity(new Intent(ListEngActivity.this, PagevoiceEngActivity.class));
     }
     public void listmap(View view) {
         Intent intent;
