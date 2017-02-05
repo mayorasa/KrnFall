@@ -41,6 +41,7 @@ import com.google.android.youtube.player.YouTubePlayer.Provider;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.example.krnfallex.krnfall.R.id.frameLayout3;
+import static com.example.krnfallex.krnfall.R.id.imageButton6;
 import static com.example.krnfallex.krnfall.R.id.youtubeplayerfragment;
 
 public class PageInfoActivity extends YouTubeBaseActivity
@@ -261,6 +262,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
                 imageButton7.setImageResource(R.drawable.icinfowhite);
                 imageButton8.setImageResource(R.drawable.icstar);
                 imageButtoncallth.setImageResource(R.drawable.icplayyellow);
+
             }
         });
 
@@ -288,6 +290,10 @@ public class PageInfoActivity extends YouTubeBaseActivity
         intent.putExtra("Lng", infodetail.get("longitude"));
         startActivity(intent);
 
+
+
+
+
     }   // click
 
     public void clickvitualreality(View view) {
@@ -296,6 +302,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
         intent.putExtra("FallName", infodetail.get("name_th"));
         intent.putExtra("urlvr", infodetail.get("url360"));
         startActivity(intent);
+
 
     }
 

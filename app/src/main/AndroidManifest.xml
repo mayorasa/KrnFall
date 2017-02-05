@@ -68,7 +68,8 @@
         <activity android:name=".PagevoiceEngActivity" />
         <activity
             android:name=".GpsFallEng"
-            android:label="@string/title_activity_gps_fall_eng"></activity>
+            android:label="@string/title_activity_gps_fall_eng" />
+        <activity android:name=".AlertNotificationEng"></activity>
     </application>
 
 </manifest>

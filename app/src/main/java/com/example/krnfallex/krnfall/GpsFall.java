@@ -17,7 +17,6 @@ import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -243,7 +242,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
         builder.setTicker("จวนถึงแว้วว");
         builder.setContentTitle("ใกล้ " + nameFallString);
         builder.setContentText("อีกไม่เกิน 500 เมตร คะ");
-        builder.setSmallIcon(R.drawable.build10);
+        builder.setSmallIcon(R.drawable.iconqc);
         builder.setSound(uri);
         builder.setContentIntent(pendingIntent);
 
@@ -294,7 +293,7 @@ public class GpsFall extends FragmentActivity implements OnMapReadyCallback {
             LatLng latLng = new LatLng(latADouble, lngADouble);
             mMap.addMarker(new MarkerOptions()
                     .position(latLng)
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.doremon48)));
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.iconpeople)));
 
         } catch (Exception e) {
             e.printStackTrace();

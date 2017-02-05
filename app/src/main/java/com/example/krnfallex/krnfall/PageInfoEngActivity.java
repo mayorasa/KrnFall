@@ -260,11 +260,13 @@ public class PageInfoEngActivity extends YouTubeBaseActivity
     }   // Main Class
     public void clickGpsFall(View view) {
 
-        Intent intent = new Intent(PageInfoEngActivity.this, GpsFall.class);
+        Intent intent = new Intent(PageInfoEngActivity.this, GpsFallEng.class);
         intent.putExtra("NameFall", infodetail.get("name_eng"));
         intent.putExtra("Lat", infodetail.get("latitude"));
         intent.putExtra("Lng", infodetail.get("longitude"));
         startActivity(intent);
+
+
 
     }   // click
 
