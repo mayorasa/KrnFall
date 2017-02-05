@@ -24,7 +24,6 @@ Most tears are running into ponds, great for swimming. There are few picnic spot
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="txt_searchth">ค้นหาน้ำตก... </string>
     <string name="txt_searcheng">Search... </string>
-    <string name="txt_feeth">ค่าบริการสำหรับบุคคล</string>
     <string name="txt_feeeng">Admission Fees</string>
     <string name="txt_null"></string>
     <string name="txt_seasonth">ฤดูกาลท่องเที่ยว</string>
@@ -40,6 +39,7 @@ Most tears are running into ponds, great for swimming. There are few picnic spot
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_gps_fall">Map</string>
     <string name="title_activity_mapsthlist">Map</string>
+    <string name="title_activity_gps_fall_eng">Map</string>
 
 
 </resources>

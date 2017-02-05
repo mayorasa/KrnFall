@@ -14,6 +14,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.transition.Visibility;
 import android.util.Log;
 import android.view.View;
@@ -335,11 +337,15 @@ public class PageInfoActivity extends YouTubeBaseActivity
         in_historyth = (TextView) findViewById(R.id.txtgeneralth);
         in_historyth.setText(infodetail.get("history_th"));
         TextView text2 = (TextView) findViewById(R.id.textView7);
-        text2.setText(R.string.txt_feeth);
+        SpannableString content = new SpannableString("ค่าบริการ");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text2.setText(content);
         in_feeth = (TextView) findViewById(R.id.txtfeeth);
         in_feeth.setText(infodetail.get("fee_th"));
         TextView text3 = (TextView) findViewById(R.id.txtseason);
-        text3.setText(R.string.txt_seasonth);
+        content = new SpannableString("ฤดูกาลท่องเที่ยว");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text3.setText(content);
         checkBox = (CheckBox) findViewById(R.id.checkBox1);
         checkBox.setVisibility(View.VISIBLE);
         checkBox = (CheckBox) findViewById(R.id.checkBox2);
@@ -347,7 +353,9 @@ public class PageInfoActivity extends YouTubeBaseActivity
         checkBox = (CheckBox) findViewById(R.id.checkBox3);
         checkBox.setVisibility(View.VISIBLE);
         TextView text4 = (TextView) findViewById(R.id.textView8);
-        text4.setText(R.string.txt_travelth);
+        content = new SpannableString("การเดินทาง");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text4.setText(content);
         in_travelth = (TextView) findViewById(R.id.texttravelth);
         in_travelth.setText(infodetail.get("travel_th"));
 

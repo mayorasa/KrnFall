@@ -22,7 +22,9 @@
             android:layout_marginTop="67dp"
             android:textColor="#ffffff"
             android:textSize="@dimen/h1"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:breakStrategy="high_quality"
+            android:hyphenationFrequency="full"/>
 
 
     </RelativeLayout>
@@ -76,7 +78,9 @@
             android:id="@+id/txtgeneralth"
             android:textColor="@color/material_grey_100"
             android:textSize="@dimen/h0"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:breakStrategy="high_quality"
+            android:hyphenationFrequency="full"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +96,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtfeeth"
                 android:textColor="@color/material_grey_100"
-                android:textSize="@dimen/h0"/>
+                android:textSize="@dimen/h0"
+                android:breakStrategy="high_quality"
+                android:hyphenationFrequency="full"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -156,7 +162,9 @@
                 android:id="@+id/textView8"
                 android:textColor="@color/material_grey_100"
                 android:textSize="@dimen/h0"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:breakStrategy="high_quality"
+                android:hyphenationFrequency="full"/>
 
             <TextView
                 android:layout_width="wrap_content"

@@ -14,6 +14,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.transition.Visibility;
 import android.util.Log;
 import android.view.View;
@@ -277,7 +279,7 @@ public class PageInfoEngActivity extends YouTubeBaseActivity
 
     public void titleview(View v) {
         TextView text = (TextView) findViewById(R.id.txtgeneralth);
-        in_genaraleng.setText(infodetail.get("genaral_eng"));
+        in_genaraleng.setText(infodetail.get("general_eng"));
         TextView text2 = (TextView) findViewById(R.id.textView7);
         text2.setText(R.string.txt_null);
         TextView text3 = (TextView) findViewById(R.id.txtfeeth);
@@ -312,11 +314,15 @@ public class PageInfoEngActivity extends YouTubeBaseActivity
         in_historyeng = (TextView) findViewById(R.id.txtgeneralth);
         in_historyeng.setText(infodetail.get("history_eng"));
         TextView text2 = (TextView) findViewById(R.id.textView7);
-        text2.setText(R.string.txt_feeeng);
+        SpannableString content = new SpannableString("Admission Fees");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text2.setText(content);
         in_feeeng = (TextView) findViewById(R.id.txtfeeth);
         in_feeeng.setText(infodetail.get("fee_eng"));
         TextView text3 = (TextView) findViewById(R.id.txtseason);
-        text3.setText(R.string.txt_seasoneng);
+        content = new SpannableString("Season Travel");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text3.setText(content);
         checkBox = (CheckBox) findViewById(R.id.checkBox1);
         checkBox.setVisibility(View.VISIBLE);
         checkBox = (CheckBox) findViewById(R.id.checkBox2);
@@ -324,7 +330,9 @@ public class PageInfoEngActivity extends YouTubeBaseActivity
         checkBox = (CheckBox) findViewById(R.id.checkBox3);
         checkBox.setVisibility(View.VISIBLE);
         TextView text4 = (TextView) findViewById(R.id.textView8);
-        text4.setText(R.string.txt_traveleng);
+        content = new SpannableString("Travel");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        text4.setText(content);
         in_traveleng = (TextView) findViewById(R.id.texttravelth);
         in_traveleng.setText(infodetail.get("travel_eng"));
 

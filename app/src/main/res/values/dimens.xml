@@ -12,4 +12,5 @@
     <dimen name="widthly">264dp</dimen>
     <dimen name="heightly">190dp</dimen>
     <dimen name="H0">20dp</dimen>
+    <dimen name="h3">16dp</dimen>
 </resources>
