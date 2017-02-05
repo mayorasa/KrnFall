@@ -52,7 +52,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
     WaterfallInfoTable waterfallInfoTable;
     HashMap<String, String> infodetail;
     HashMap<String, Integer> infoseason;
-    TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth,;
+    TextView in_nameth, in_genaralth, in_historyth, in_feeth, in_travelth;
     Double tatal;
     EditText editCal_Total;
     SimpleDateFormat df_show;
