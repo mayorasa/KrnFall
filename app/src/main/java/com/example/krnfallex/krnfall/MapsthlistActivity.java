@@ -40,6 +40,8 @@ public class MapsthlistActivity extends FragmentActivity implements OnMapReadyCa
                 .title("จังหวัดกาญจนบุรี")
                 .snippet("อำเภอเมือง")
                 .snippet(getString(R.string.app_name))
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.iconmapnull))
         );
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.845893, 98.809198), 9));
 

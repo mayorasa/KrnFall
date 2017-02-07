@@ -149,71 +149,68 @@ public class PageInfoEngActivity extends YouTubeBaseActivity
         RelativeLayout d = (RelativeLayout) findViewById(R.id.imgbg);
 
         if (waterfall_id == 1) {
-            d.setBackgroundResource(R.drawable.pagelsth1);
+            d.setBackgroundResource(R.drawable.pagelseng1);
         }
 
         if (waterfall_id == 2) {
-            d.setBackgroundResource(R.drawable.pagelsth2);
-        }
-        if (waterfall_id == 2) {
-            d.setBackgroundResource(R.drawable.pagelsth2);
+            d.setBackgroundResource(R.drawable.pagelseng2);
         }
         if (waterfall_id == 3) {
-            d.setBackgroundResource(R.drawable.pagelsth3);
+            d.setBackgroundResource(R.drawable.pagelseng3);
         }
         if (waterfall_id == 4) {
-            d.setBackgroundResource(R.drawable.pagelsth4);
+            d.setBackgroundResource(R.drawable.pagelseng4);
         }
         if (waterfall_id == 5) {
-            d.setBackgroundResource(R.drawable.pagelsth5);
+            d.setBackgroundResource(R.drawable.pagelseng5);
         }
         if (waterfall_id == 6) {
-            d.setBackgroundResource(R.drawable.pagelsth6);
+            d.setBackgroundResource(R.drawable.pagelseng6);
         }
         if (waterfall_id == 7) {
-            d.setBackgroundResource(R.drawable.pagelsth7);
+            d.setBackgroundResource(R.drawable.pagelseng7);
         }
         if (waterfall_id == 8) {
-            d.setBackgroundResource(R.drawable.pagelsth8);
+            d.setBackgroundResource(R.drawable.pagelseng8);
         }
         if (waterfall_id == 9) {
-            d.setBackgroundResource(R.drawable.pagelsth9);
+            d.setBackgroundResource(R.drawable.pagelseng9);
         }
         if (waterfall_id == 10) {
-            d.setBackgroundResource(R.drawable.pagelsth10);
+            d.setBackgroundResource(R.drawable.pagelseng10);
         }
         if (waterfall_id == 11) {
-            d.setBackgroundResource(R.drawable.pagelsth11);
+            d.setBackgroundResource(R.drawable.pagelseng11);
         }
         if (waterfall_id == 12) {
-            d.setBackgroundResource(R.drawable.pagelsth12);
+            d.setBackgroundResource(R.drawable.pagelseng12);
         }
         if (waterfall_id == 13) {
-            d.setBackgroundResource(R.drawable.pagelsth13);
+            d.setBackgroundResource(R.drawable.pagelseng13);
         }
         if (waterfall_id == 14) {
-            d.setBackgroundResource(R.drawable.pagelsth14);
+            d.setBackgroundResource(R.drawable.pagelseng14);
         }
         if (waterfall_id == 15) {
-            d.setBackgroundResource(R.drawable.pagelsth15);
+            d.setBackgroundResource(R.drawable.pagelseng15);
         }
         if (waterfall_id == 16) {
-            d.setBackgroundResource(R.drawable.pagelsth16);
+            d.setBackgroundResource(R.drawable.pagelseng16);
         }
         if (waterfall_id == 17) {
-            d.setBackgroundResource(R.drawable.pagelsth17);
+            d.setBackgroundResource(R.drawable.pagelseng17);
         }
         if (waterfall_id == 18) {
-            d.setBackgroundResource(R.drawable.pagelsth18);
+            d.setBackgroundResource(R.drawable.pagelseng18);
         }
         if (waterfall_id == 19) {
-            d.setBackgroundResource(R.drawable.pagelsth19);
+            d.setBackgroundResource(R.drawable.pagelseng19);
         }
         if (waterfall_id == 20) {
-            d.setBackgroundResource(R.drawable.pagelsth20);
+            d.setBackgroundResource(R.drawable.pagelseng20);
         }
         if (waterfall_id == 21) {
-            d.setBackgroundResource(R.drawable.pagelsth21);
+            d.setBackgroundResource(R.drawable.pagelseng21);
         }
 
         mDialogSimple = (ImageButton) findViewById(R.id.imageButtoncallth);

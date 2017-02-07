@@ -83,9 +83,7 @@ public class ListthActivity extends AppCompatActivity {
         editText1 = (EditText)findViewById(R.id.editText);
         editText1.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable arg0) {
-                //ArrayList<String, String> src_list = new ArrayList<String, string>();
                 ArrayList<HashMap<String, Object>> src_list = new ArrayList<HashMap<String, Object>>();
-                //ArrayList<HashMap<String, Objects>> src_list = new ArrayList<HashMap<String, Objects>>();
                 int textlength = editText1.getText().length();
                 if (textlength > 0) {
                     for (int i = 0; i < ListthActivity.size(); i++) {

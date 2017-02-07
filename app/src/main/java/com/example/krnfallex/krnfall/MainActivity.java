@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Typeface myTypeface = Typeface.createFromAsset(getAssets(), "supermarket.ttf");
-        //TextView myTextview = (TextView)findViewById(R.id.textView);
-        //myTextview.setTypeface(myTypeface);
+
     }
     public void clickThai(View view) {
         startActivity(new Intent(MainActivity.this, ListthActivity.class));

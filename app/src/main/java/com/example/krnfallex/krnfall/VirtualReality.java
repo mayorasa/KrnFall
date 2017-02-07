@@ -27,9 +27,6 @@ public class VirtualReality extends AppCompatActivity {
 
         String video_path = urlvrstring;
         Uri uri = Uri.parse(video_path);
-
-        // With this line the Youtube application, if installed, will launch immediately.
-        // Without it you will be prompted with a list of the application to choose.
         uri = Uri.parse("vnd.youtube:"  + uri.getQueryParameter("v"));
 
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);

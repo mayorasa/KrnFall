@@ -52,6 +52,9 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 .position(thailand)
                 .title("KANCHABURI")
                 .snippet(getString(R.string.app_name))
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.iconmapnull))
+
         );
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.845893, 98.809198), 9));
 

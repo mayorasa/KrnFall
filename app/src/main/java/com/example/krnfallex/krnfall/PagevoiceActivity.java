@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -62,9 +63,9 @@ public class PagevoiceActivity extends AppCompatActivity {
 
                     Uri.parse("https://market.android.com/details?id=APP_PACKAGE_NAME"));
             startActivity(your_browser_intent);
-//			Toast.makeText(getApplicationContext(),
-//					"Sorry! Speech recognition is not supported in this device.",
-//					Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(),
+					"Sorry! Speech recognition is not supported in this device.",
+					Toast.LENGTH_SHORT).show();
         }
     }
 
