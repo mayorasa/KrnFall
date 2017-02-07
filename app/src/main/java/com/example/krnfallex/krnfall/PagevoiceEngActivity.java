@@ -1,6 +1,7 @@
 package com.example.krnfallex.krnfall;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.speech.RecognizerIntent;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PagevoiceEngActivity extends AppCompatActivity {
 
@@ -39,6 +42,12 @@ public class PagevoiceEngActivity extends AppCompatActivity {
                 startSpeechToText();
             }
         });
+    }
+
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 
     /**

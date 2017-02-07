@@ -32,6 +32,8 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class ListthActivity extends AppCompatActivity {
 
     ListView listView;
@@ -48,9 +50,6 @@ public class ListthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
 
         setContentView(R.layout.activity_listth);
@@ -128,23 +127,6 @@ public class ListthActivity extends AppCompatActivity {
         return m.find();
     }
 
-    public Bitmap getImage(int i){
-
-        String qu = "select listmg waterfall table where feedid=" + i ;
-        Cursor cur = db.rawQuery(qu, null);
-
-        if (cur.moveToFirst()){
-            byte[] imgByte = cur.getBlob(0);
-            cur.close();
-            return BitmapFactory.decodeByteArray(imgByte, 0, imgByte.length);
-        }
-        if (cur != null && !cur.isClosed()) {
-            cur.close();
-        }
-
-        return null ;
-    }
-
     public void clickvoicelistth(View view) {
         startActivity(new Intent(ListthActivity.this, PagevoiceActivity.class));
     }
@@ -155,12 +137,13 @@ public class ListthActivity extends AppCompatActivity {
         intent.putExtra("name_th", name_th);
         startActivity(intent);
 
-
-
-
-
     }
     public void buttonback(View view) {
         startActivity(new Intent(ListthActivity.this, MainActivity.class));
+    }
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

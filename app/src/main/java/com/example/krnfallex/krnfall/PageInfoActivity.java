@@ -255,8 +255,6 @@ public class PageInfoActivity extends YouTubeBaseActivity
                 });
                 builder.setNegativeButton("ยกเลิก", null);
                 builder.create();
-
-                // สุดท้ายอย่าลืม show() ด้วย
                 builder.show();
 
                 imageButton7.setImageResource(R.drawable.icinfowhite);
@@ -267,14 +265,14 @@ public class PageInfoActivity extends YouTubeBaseActivity
         });
 
 
-        /////
+        /////Image Slide
         listImage = waterfallimageTable.getListImage(waterfall_id);
         for (int i=0; i < listImage.size(); i++)
         {
             byte[] byteArray2 = listImage.get(i);
             Bitmap bm = BitmapFactory.decodeByteArray(byteArray2, 0 ,byteArray2.length);
             bitmapArray.add(bm);
-            //Log.d("Bloblength", String.valueOf(byteArray2.length));
+
         }
 
         ////
@@ -379,7 +377,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
 
     }
 
-
+    //font
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
@@ -405,6 +403,7 @@ public class PageInfoActivity extends YouTubeBaseActivity
         }
     }
     //End การทำงานดึง api youtube ออกมาแสดง
+
     public void btrtif(View view) {
         startActivity(new Intent(PageInfoActivity.this, ListthActivity.class));
     }

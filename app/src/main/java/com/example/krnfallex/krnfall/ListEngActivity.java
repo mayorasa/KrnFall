@@ -32,6 +32,8 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class ListEngActivity extends AppCompatActivity {
 
     ListView listView;
@@ -164,5 +166,10 @@ public class ListEngActivity extends AppCompatActivity {
     }
     public void buttonback(View view) {
         startActivity(new Intent(ListEngActivity.this, MainActivity.class));
+    }
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

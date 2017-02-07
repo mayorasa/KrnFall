@@ -1,6 +1,7 @@
 package com.example.krnfallex.krnfall;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.speech.RecognizerIntent;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PagevoiceActivity extends AppCompatActivity {
 
@@ -67,6 +70,11 @@ public class PagevoiceActivity extends AppCompatActivity {
 					"Sorry! Speech recognition is not supported in this device.",
 					Toast.LENGTH_SHORT).show();
         }
+    }
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 
     /**
@@ -239,6 +247,7 @@ public class PagevoiceActivity extends AppCompatActivity {
 
                     break;
                 }
+
 
         }
     }

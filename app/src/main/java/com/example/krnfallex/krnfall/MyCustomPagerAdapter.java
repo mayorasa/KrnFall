@@ -63,25 +63,6 @@ public class MyCustomPagerAdapter extends PagerAdapter{
         return itemView;
     }
 
-    //@Override
-    //public Object instantiateItem(ViewGroup container, final int position) {
-        //View itemView = layoutInflater.inflate(R.layout.itemimageslide, container, false);
-
-        //ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
-        //imageView.setImageResource(images[position]);
-
-        //container.addView(itemView);
-
-        //listening to image click
-        //imageView.setOnClickListener(new View.OnClickListener() {
-            //@Override
-            //public void onClick(View v) {
-                //Toast.makeText(context, "you clicked image " + (position + 1), Toast.LENGTH_LONG).show();
-            //}
-        //});
-
-        //return itemView;
-    //}
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
