@@ -52,12 +52,12 @@ public class PagevoiceActivity extends AppCompatActivity {
     private void startSpeechToText() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "th-TH");
-        startActivityForResult(intent, SPEECH_RECOGNITION_CODE);
+        //startActivityForResult(intent, SPEECH_RECOGNITION_CODE);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                "Speak something...");
+        //intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                //"Speak something...");
         try {
             startActivityForResult(intent, SPEECH_RECOGNITION_CODE);
         } catch (ActivityNotFoundException a) {
@@ -124,7 +124,7 @@ public class PagevoiceActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     }
-                    else if (text.equals("น้ำตกคลิตี้") || text.contains("คลิตี้"))
+                    else if (text.equals("น้ำตกคลีตี้") || text.contains("คลีตี้"))
                     {
                         intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
                         intent.putExtra("waterfall_id", 5);
@@ -208,14 +208,14 @@ public class PagevoiceActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     }
-                    else if (text.equals("น้ำตกธารเงิน-ธารเทอง") || text.contains("ธารเงิน") || text.contains("ธารทอง"))
+                    else if (text.equals("น้ำตกธารเงิน-ธารทอง") || text.contains("ธารเงิน") || text.contains("ธารทอง"))
                     {
                         intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
                         intent.putExtra("waterfall_id", 17);
                         startActivity(intent);
 
                     }
-                    else if (text.equals("น้ำตกเอราวัณ") || text.contains("อารา"))
+                    else if (text.equals("น้ำตกเอราวัณ") || text.contains("เอรา"))
                     {
                         intent = new Intent(PagevoiceActivity.this, PageInfoActivity.class);
                         intent.putExtra("waterfall_id", 18);

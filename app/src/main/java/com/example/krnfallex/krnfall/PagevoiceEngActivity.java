@@ -56,7 +56,7 @@ public class PagevoiceEngActivity extends AppCompatActivity {
     private void startSpeechToText() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"th-TH");
-        startActivityForResult(intent, SPEECH_RECOGNITION_CODE);
+        //startActivityForResult(intent, SPEECH_RECOGNITION_CODE);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
@@ -122,7 +122,7 @@ public class PagevoiceEngActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     }
-                    else if (text.equals("คลิตี้ waterfall") || text.contains("คลิตี้"))
+                    else if (text.equals("คลีตี้ waterfall") || text.contains("คลีตี้"))
                     {
                         intent = new Intent(PagevoiceEngActivity.this, PageInfoEngActivity.class);
                         intent.putExtra("waterfall_id", 5);
@@ -213,7 +213,7 @@ public class PagevoiceEngActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     }
-                    else if (text.equals("เอราวัณ waterfall") || text.contains("อารา") || text.contains("erawan"))
+                    else if (text.equals("เอราวัณ waterfall") || text.contains("เอรา") || text.contains("erawan"))
                     {
                         intent = new Intent(PagevoiceEngActivity.this, PageInfoEngActivity.class);
                         intent.putExtra("waterfall_id", 18);
