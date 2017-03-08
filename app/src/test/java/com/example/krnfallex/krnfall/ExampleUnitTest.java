@@ -1,4 +1,4 @@
-package com.example.krnfallex.krnfall;
+package com.maysah.krnfallex.krnfall;
 
 import org.junit.Test;
 

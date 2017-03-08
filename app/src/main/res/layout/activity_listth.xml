@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.krnfallex.krnfall.ListthActivity"
+    tools:context="com.maysah.krnfallex.krnfall.ListthActivity"
     android:background="@drawable/bglsth">
 
     <FrameLayout

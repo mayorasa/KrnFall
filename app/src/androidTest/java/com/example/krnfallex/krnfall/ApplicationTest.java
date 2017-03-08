@@ -1,4 +1,4 @@
-package com.example.krnfallex.krnfall;
+package com.maysah.krnfallex.krnfall;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
